@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const sql = require('mysql');
+const cors = require('cors')
 
 app.use(express.json());
+app.use(cors())
 
 const hostname=process.env.host // host
 const userdata=process.env.user   //user
