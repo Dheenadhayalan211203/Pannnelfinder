@@ -4,10 +4,10 @@ const sql = require('mysql');
 
 app.use(express.json());
 
-const hostname='srv1554.hstgr.io' 
-const userdata='u704628573_mkce'
-const passworddata='Mkce@placement@2024'
-const databasedata='u704628573_placement'
+const hostname=process.env.host // host
+const userdata=process.env.user   //user
+const passworddata=process.env.pass //pass
+const databasedata=process.env.db //db
 
 let con; // Declare connection variable globally
 
