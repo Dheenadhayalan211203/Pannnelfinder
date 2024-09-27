@@ -4,17 +4,20 @@ const sql = require('mysql');
 
 app.use(express.json());
 
-const hostname=
+const hostname='srv1554.hstgr.io' 
+const userdata='u704628573_mkce'
+const passworddata='Mkce@placement@2024'
+const databasedata='u704628573_placement'
 
 let con; // Declare connection variable globally
 
 async function connectdb() {
     try {
         con = sql.createPool({
-            host: 'srv1554.hstgr.io',
-            user: 'u704628573_mkce',
-            password: 'Mkce@placement@2024',
-            database: 'u704628573_placement'
+            host: hostname,
+            user: userdata,
+            password: passworddata,
+            database:databasedata
         });
 
         console.log('Database connection pool created');
